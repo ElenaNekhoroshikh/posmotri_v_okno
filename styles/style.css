@@ -8,6 +8,11 @@ html {
   block-size: 100%;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -16,6 +21,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -37,8 +45,6 @@ fieldset {
   align-items: end;
   width: 1140px;
   gap: 30px;
-  margin-top: 133px;
-  margin-left: 30px;
 }
 
 .visually-hidden {
@@ -54,7 +60,7 @@ fieldset {
 .result__video-container {
   width: 711px;
   height: 386px;
-  margin-bottom: 5px;
+  padding-bottom: 16px;
   position: relative;
   padding-bottom: 10px;
 }
@@ -62,6 +68,7 @@ fieldset {
 .result__video {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .search-form__fieldset {
@@ -78,7 +85,7 @@ fieldset {
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
 }
 
 .search-form__checkbox-list {
@@ -90,6 +97,8 @@ fieldset {
   width: fit-content;
   cursor: pointer;
   padding: 2px;
+  display: flex;
+  align-items: center;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -107,21 +116,20 @@ fieldset {
   line-height: 21.6px;
   background-color: transparent;
   border-style: solid none;
+  border-color: #fff;
+  color: rgb(255, 255, 255/0.7);
   width: 225px;
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: flex;
   margin-right: 2px;
   margin-left: 2px;
-  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
-}
-
-input[type='checkbox']:focus-visible + span {
-  border: 3px solid #e4ad2c
 }
 
 input[type='checkbox']:checked + span {
@@ -132,30 +140,32 @@ input[type='checkbox']:checked + span {
   outline-offset: 2px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
 .content__list {
   height: 298px;
   width: 399px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: clip;
   display: flex;
   flex-direction: column;
-  gap: 8px;
   position: relative;
-  margin-top: 3px;
+  /*margin-top: 3px;*/
+}
+
+.content__list-item:not(:last-of-type) {
+  padding-bottom: 30px;
 }
 
 .content__details {
   width: 399px;
-  height: 534px;
   padding-top: 20px;
 }
 
 .title {
   width: 260px;
-  height: 210px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -164,7 +174,8 @@ input[type='checkbox']:checked + span {
 }
 
 .title .content__accent {
-  color: #696969;
+  color: #545050;
+  opacity: 70%;
 }
 
 .content__card-link {
@@ -178,19 +189,19 @@ input[type='checkbox']:checked + span {
   background-color: #545050;
 }
 
-.content__video-card:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__video-card:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
 
@@ -206,6 +217,10 @@ input[type='checkbox']:checked + span {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
@@ -213,15 +228,21 @@ input[type='checkbox']:checked + span {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-thumbnail {
   height: 103px;
   width: 194px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .button {
-  border: 1px #fff solid;
+  border: 1px currentColor solid;
   background-color: transparent;
   color: #fff;
   cursor: pointer;
@@ -247,19 +268,16 @@ button:focus {
 
 button:focus-visible {
   background-color: #545050;
+  outline: 1px currentColor solid;
+  outline-offset: -3px;
 }
 
 .search-form__submit-button {
   width: 194px;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 
 .more-button{
   width: 100%;
   height: 34px;
-}
-
-ul,
-ol {
-  list-style: none;
 }
