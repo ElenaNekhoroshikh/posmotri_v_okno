@@ -84,6 +84,7 @@ fieldset {
 .search-form__fieldset-title {
   font-weight: 400;
   line-height: 21.6px;
+  font: inherit;
 }
 
 .search-form__checkbox-list {
@@ -177,7 +178,7 @@ input[type='checkbox']:checked + span {
 
 .content__card-link {
   text-decoration: none;
-  color: inherit;
+  color: #fff;
   display: block;
   margin: 2px;
 }
@@ -239,7 +240,7 @@ input[type='checkbox']:checked + span {
 .button {
   border: 1px currentColor solid;
   background-color: transparent;
-  color: inherit;
+  color: #fff;
   cursor: pointer;
   font: inherit;
   font-weight: 700;
@@ -269,11 +270,6 @@ button:focus-visible {
 .search-form__submit-button {
   width: 194px;
   margin-top: 20px;
-}
-
-.more-button{
-  width: 100%;
-  height: 34px;
 }
 
 .more-button{
