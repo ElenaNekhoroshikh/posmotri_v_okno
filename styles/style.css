@@ -82,9 +82,7 @@ fieldset {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
-  font-size: 18px;
   line-height: 21.6px;
 }
 
@@ -110,9 +108,8 @@ fieldset {
 
 .search-form__textfield {
   appearance: none;
-  font-family: Fira Sans Condensed, sans-serif;
+  font: inherit;
   font-weight: 400;
-  font-size: 18px;
   line-height: 21.6px;
   background-color: transparent;
   border-style: solid none;
@@ -180,7 +177,7 @@ input[type='checkbox']:checked + span {
 
 .content__card-link {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
   display: block;
   margin: 2px;
 }
@@ -224,9 +221,7 @@ input[type='checkbox']:checked + span {
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
-  font-size: 18px;
   line-height: 16.2px;
   text-overflow: ellipsis; 
   white-space: nowrap; 
@@ -244,11 +239,10 @@ input[type='checkbox']:checked + span {
 .button {
   border: 1px currentColor solid;
   background-color: transparent;
-  color: #fff;
+  color: inherit;
   cursor: pointer;
-  font-family: Fira Sans Condensed, sans-serif;
+  font: inherit;
   font-weight: 700;
-  font-size: 18px;
   line-height: 21.6px;
   text-align: center;
   height: 34px;
