@@ -60,7 +60,7 @@ fieldset {
 .result__video-container {
   width: 711px;
   height: 386px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   position: relative;
 }
 
@@ -76,8 +76,8 @@ fieldset {
 
 .search-form {
   display: flex;
-  justify-content: space-between;
   align-items: end;
+  gap: 40px;
 }
 
 .search-form__fieldset-title {
@@ -97,13 +97,12 @@ fieldset {
   cursor: pointer;
   display: flex;
   align-items: center;
+  /*gap: 5px;*/
 }
 
 .search-form__label:has(:focus-visible) {
-  outline-color: #fff;
-  outline-style: solid;
   outline-offset: 2px;
-  outline-width: 1px;
+  outline: 1px solid #fff;
 }
 
 .search-form__textfield {
@@ -114,7 +113,7 @@ fieldset {
   background-color: transparent;
   border-style: solid none;
   border-color: #fff;
-  color: rgb(255, 255, 255, 0,7);
+  color: currentColor;
   width: 225px;
   border-width: 1px;
 }
@@ -257,7 +256,7 @@ button:active {
 }
 
 button:hover {
-  text-decoration: underline;
+  text-decoration: underline 1px #fff;
 }
 
 button:focus {
@@ -265,7 +264,6 @@ button:focus {
 }
 
 button:focus-visible {
-  background-color: #545050;
   outline: 1px currentColor solid;
   outline-offset: -3px;
 }
