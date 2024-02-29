@@ -74,7 +74,8 @@ fieldset {
 .search-form {
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  gap: 40px;
 }
 
 .search-form__fieldset {
@@ -90,7 +91,7 @@ fieldset {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .search-form__label {
